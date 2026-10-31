@@ -404,7 +404,7 @@ body
 	linear-gradient(
 			rgba(0, 0, 0, 0) 55%,
 			rgba(0, 0, 0, 0.75)),
-		url("BG/tab_event.jpg");
+		url("BG/bg_event.webp");
 		
 }
 
@@ -413,7 +413,7 @@ body
 	linear-gradient(
 			rgba(0, 0, 0, 0) 55%,
 			rgba(0, 0, 0, 0.75)),
-		url("BG/tab_ninja.jpg");
+		url("BG/bg_ninja.webp");
 }
 
 .journey-card{
@@ -421,7 +421,7 @@ body
 	linear-gradient(
 			rgba(0, 0, 0, 0) 55%,
 			rgba(0, 0, 0, 0.75)), 
-		url('BG/tab_journey.jpg');
+		url('BG/bg_journey.webp');
 }
 
 .side-decoration {
