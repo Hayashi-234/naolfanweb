@@ -41,10 +41,10 @@ document.addEventListener("click", function (event) {
 const banner = document.getElementById("banner");
 
 const bannerImages = [
-	"BG/MADARA_sang lap lang la_banner.jpg",
-    "BG/MADARA_edo tensei_banner.jpg",
-	"BG/MADARA_edo tensei giai_banner.png",
-    "BG/MADARA_bach dien an gia_banner.jpg"
+	"BG/madara_sang lap lang la_banner.webp",
+    "BG/madara_edo tensei_banner.webp",
+	"BG/madara_giai edo tensei_banner.webp",
+    "BG/madara_sang lap lang la_banner.webp"
 ];
 bannerImages.forEach((src) => {
     const img = new Image();
