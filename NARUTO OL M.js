@@ -44,7 +44,7 @@ const bannerImages = [
 	"BG/madara_sang lap lang la_banner.webp",
     "BG/madara_edo tensei_banner.webp",
 	"BG/madara_giai edo tensei_banner.webp",
-    "BG/madara_sang lap lang la_banner.webp"
+    "BG/madara_bach dien an gia_banner.webp"
 ];
 bannerImages.forEach((src) => {
     const img = new Image();
