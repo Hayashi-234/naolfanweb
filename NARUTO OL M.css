@@ -1,0 +1,444 @@
+body 
+{
+    margin: 0;
+    background-color: #363636;
+    color: white;
+    font-family: Montserrat, sans-serif;
+}
+
+/* Thanh điều hướng */
+.navbar
+{
+	width: 100%;
+    height: 60px;
+    background-color: #191919;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+	/* position: fixed;*/
+	position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.endbar{
+	height: auto;
+    background-color: #191919;
+    padding: 0 4%;
+	padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+	overflow: hidden;
+	flex-wrap: wrap;
+}
+
+.konoha-icon{
+    display: flex;
+	height: 150px;
+	margin-left: auto;
+	margin-bottom: auto;
+	opacity: 0.1;
+}
+
+.foot-text p
+{
+	margin-top: 15px;
+    color: white;
+    font-size: 12px;
+    line-height: 1.75;
+}
+.foot-text h1{
+	margin-top: 25px;
+    color: white;
+    font-size: 14px;
+    line-height: 0.5;
+}
+
+.empty-box{
+	display: flex;
+	width: 100%;
+}
+
+/* Logo và tên website */
+.brand
+{
+    display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.logo
+{
+	display: flex;
+    height: 56px;
+	gap: 5px;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand-text h1 {
+    margin: 0;
+    color: white;
+    font-size: 21px;
+    line-height: 1;
+}
+
+.brand-text p
+{
+    margin: 0;
+    color: white;
+    font-size: 12px;
+    line-height: 1.1;
+}
+
+/* Các công cụ bên phải */
+.nav-tools
+{
+    display: flex;
+    align-items: center;
+	min-width: 0;
+    gap: 15px;
+}
+
+.search-box
+{
+	min-width: 60px;
+    flex: 1 1 300px;
+    height: 30px;
+    background-color: #424242;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+	
+	margin-left: 25px;
+	z-index: 3000;
+}
+
+.search-icon
+{
+	width: 18px;
+    height: 18px;
+	margin-right: 8px;
+	margin-left: 2px;
+	color: white;
+	align-items: center;
+	--icon-str: 50;
+	transition: transform 0.2s ease;
+}
+
+.search-icon svg .st0 {
+    stroke-width: var(--icon-str, 60);
+}
+
+.search-icon:hover{
+	color: #FFE169;
+	--icon-str: 65;
+    transform: scale(1.08);
+}
+
+.search-box input
+{
+    flex: 1;
+    min-width: 30px;
+	width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: 14px;
+	color: #ffffff;
+	background-color: #424242;
+}
+
+.share-button,
+.menu-button
+{
+	flex: 0 0 auto;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-button svg
+{
+    width: 21px;
+    height: 21px;
+	display: flex;
+	transition: 
+		transform 0.2s ease;
+	
+}
+
+.share-button:hover {
+    color: #FFE169;
+    transform: scale(1.08);
+}
+
+.copy-message {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+
+    font-size: 14px;
+    z-index: 2000;
+
+    opacity: 0;
+    visibility: hidden;
+    transition:
+		opacity 0.3s ease,
+		visibility 0.3s ease;
+}
+
+.copy-message.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-button svg
+{
+    width: 21px;
+    height: 21px;
+	display: flex;
+	transition: 
+		transform 0.2s ease;
+}
+
+.menu-container:hover
+.menu-button,
+.menu-button.open {
+	color: #FFE169;
+    transform: scale(1.08);
+}
+
+/* Phần tử bao bọc nút menu và bảng */
+.menu-container {
+    position: relative;
+}
+
+/* Bảng menu thả xuống */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: -20px;
+
+    width: 160px;
+    padding: 5px 0;
+	padding-top: 20px;
+
+    background-color: 
+		/* #191919, opacity(); */
+		rgba(25, 25, 25, 0.6);
+    border-radius: 8px;
+
+    display: none;
+    z-index: 0;
+}
+
+/* Các mục trong bảng */
+.dropdown-menu a {
+    display: block;
+    padding: 12px 12px;
+	margin: 5px 5px;
+
+    color: white;
+	text-align: right;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+/* Hiệu ứng khi rê chuột lên từng mục */
+.dropdown-menu a:hover {
+    background-color: #FFE88A;
+	color: #000000;
+	font-weight: 700;
+	text-align: left;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+
+/* Đường gạch ngang */
+.menu-divider {
+    height: 1px;
+    background-color: #777;
+    margin: 8px 12px;
+}
+
+/* Mở bảng khi rê chuột vào khu vực menu */
+@media (hover: hover) and (pointer: fine) {
+    .menu-container:hover .dropdown-menu,
+    .menu-container:focus-within .dropdown-menu {
+        display: block;
+    }
+}
+
+.banner
+{
+	padding-top: 0px;
+    width: 100%;
+    height: 65vh;
+	background-color: #000000;
+    position: relative;
+	overflow: hidden;
+    display: block;
+	z-index: 0;
+}
+
+.banner-style {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+/* Ảnh chuẩn bị trượt vào */
+#nextBannerImage {
+    display: block;
+    z-index: 2;
+	transform: translateX(100%);
+}
+
+#nextBannerImage.slide-in {
+    transform: translateX(0) !important;
+    transition: transform 1s ease;
+}
+
+#bannerImage.slide-out {
+	transition: transform 1s ease;
+    transform: translateX(-100%);
+}
+
+.navigation-layout {
+    position: relative;
+    width: 100%;
+    min-height: 160px;
+}
+
+.navigation-cards {
+	position: relative;
+    z-index: 1;
+	width: 100%;
+    display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.nav-card {
+    flex: 1;
+	flex-shrink: 0;
+	max-width: 350px;
+	height: 140px;
+	margin: 5px;
+	margin-top:10px;
+    /*background-color: #222222;*/
+	border: 1px solid #555555;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: 
+		transform 0.25s ease, 
+		filter 0.25s ease,
+		background-size 0.25s ease;
+}
+
+.nav-card:hover {
+    transform: scale(1.03);
+    filter: brightness(1.15);
+	background-size: 115%;
+	border: 1px solid #ffffff;
+	box-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
+	.card-title{
+		text-shadow:
+			0 0 16px rgba(0, 0, 0, 1),
+			0 0 16px rgba(0, 0, 0, 0.9);
+	}
+}
+
+.card-title{
+	color: white;
+	margin-top: 75px;
+    font-size: 28px;
+    text-transform: uppercase;
+	text-shadow: 0 0 16px rgba(0, 0, 0, 0.9);
+	transition: 
+		text-shadow 0.25s ease;
+		
+}
+
+.event-card{
+    background-image: 
+	linear-gradient(
+			rgba(0, 0, 0, 0) 55%,
+			rgba(0, 0, 0, 0.75)),
+		url("BG/tab_event.jpg");
+		
+}
+
+.ninja-card{
+    background-image: 
+	linear-gradient(
+			rgba(0, 0, 0, 0) 55%,
+			rgba(0, 0, 0, 0.75)),
+		url("BG/tab_ninja.jpg");
+}
+
+.journey-card{
+    background-image:
+	linear-gradient(
+			rgba(0, 0, 0, 0) 55%,
+			rgba(0, 0, 0, 0.75)), 
+		url('BG/tab_journey.jpg');
+}
+
+.side-decoration {
+	position: absolute;
+	inset: 0;
+    display: flex;
+	flex-shrink: 1;
+    justify-content: space-between;
+    align-items: stretch;
+	overflow: hidden;
+    z-index: 0;
+}
+
+.side-image {
+    display: flex;
+    width: auto;
+    height: 160px;
+	object-fit: contain;
+	opacity: 0.2;
+}
